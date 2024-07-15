@@ -1,5 +1,10 @@
 function page() {
-  return <div>page</div>;
+  return (
+    <div>
+      {/* Hero Section */}
+      <section className="container-fluid">hero</section>
+    </div>
+  );
 }
 
 export default page;
