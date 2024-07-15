@@ -14,10 +14,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className="bg-primary-900 text-white">
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
-          <header className="h-[88px] bg-slate-700 p-2">header</header>
+          <header className="h-[88px]  p-2">header</header>
           <main>
             <div>{children}</div>
           </main>
