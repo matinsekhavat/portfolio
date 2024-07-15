@@ -25,7 +25,10 @@ function NavList({ direction }: NavListProps) {
     >
       {accessLinkList.map((item) => {
         return (
-          <li key={item.title}>
+          <li
+            key={item.title}
+            className={`text-lg ${direction === "row" ? "" : "header-link"}`}
+          >
             <Link href={item.href}>{item.title}</Link>
           </li>
         );
