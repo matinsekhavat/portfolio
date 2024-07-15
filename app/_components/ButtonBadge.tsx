@@ -5,7 +5,7 @@ type ButtonBadgeProps = {
 };
 function ButtonBadge({ children }: ButtonBadgeProps) {
   return (
-    <button className="px-4 py-2 bg-gradient-to-r from-accent-900 to-accent-800 rounded-full text-lg">
+    <button className="px-4 py-2 bg-gradient-to-r from-accent-900 to-accent-800 rounded-full ">
       {children}
     </button>
   );
