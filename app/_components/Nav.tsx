@@ -4,6 +4,7 @@ import Link from "next/link";
 import React, { useRef, useState } from "react";
 import Overlay from "./Overlay";
 import useDetectOutsideClick from "../_hooks/useOutsideClick";
+import NavList from "./NavList";
 
 function Nav() {
   const navRef = useRef<HTMLDivElement | null>(null);
@@ -21,45 +22,27 @@ function Nav() {
       >
         <AlignJustify size={30} cursor="pointer" />
       </button>
-      {/* overlay */}
-      {isMobileNavShow && (
-        <div className="">
-          <Overlay show={isMobileNavShow}>
-            <div
-              ref={navRef}
-              className="  fixed top-0 right-0 bottom-0 w-[300px] bg-white z-50"
-            >
-              <div className="flex flex-col gap-2 h-full w-full  space-y-4">
-                <h1 className="text-3xl text-primary-900 font-semibold border-b border-b-primary-900 pb-4 px-8 py-4">
-                  اهورا
-                </h1>
-                <ul className=" px-8 py-4 text-primary-900">
-                  <li>test</li>
-                  <li>test</li>
-                  <li>test</li>
-                  <li>test</li>
-                </ul>
-              </div>
+      {/* mobile overlay */}
+      <div className="">
+        <Overlay show={isMobileNavShow}>
+          <div
+            ref={navRef}
+            className={`fixed top-0 ${
+              isMobileNavShow ? "right-0" : "-right-[300px]"
+            } bottom-0  bg-white z-50 transition-all duration-300  w-[300px]`}
+          >
+            <div className="flex flex-col gap-2 h-full w-full  space-y-4">
+              <h1 className="text-3xl text-primary-900 font-semibold border-b border-b-primary-900 pb-4 px-8 py-4">
+                اهورا
+              </h1>
+              <NavList direction="row" />
             </div>
-          </Overlay>
-        </div>
-      )}
+          </div>
+        </Overlay>
+      </div>
       {/* Desktop design */}
       <div className="hidden  mr-8 lg:block">
-        <ul className="flex items-center gap-4">
-          <li>
-            <Link href="/">صفحه اصلی</Link>
-          </li>
-          <li>
-            <Link href="/">صفحه اصلی</Link>
-          </li>
-          <li>
-            <Link href="/">صفحه اصلی</Link>
-          </li>
-          <li>
-            <Link href="/">صفحه اصلی</Link>
-          </li>
-        </ul>
+        <NavList direction="col" />
       </div>
     </div>
   );
