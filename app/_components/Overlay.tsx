@@ -4,7 +4,7 @@ type OverlayProps = {
   children: ReactNode;
   show: boolean;
 };
-function Overlay({ children, show = false }: OverlayProps) {
+function Overlay({ children, show }: OverlayProps) {
   return (
     <div
       className={`${
