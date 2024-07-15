@@ -1,11 +1,17 @@
 "use client";
 import { AlignJustify } from "lucide-react";
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import Overlay from "./Overlay";
+import useDetectOutsideClick from "../_hooks/useOutsideClick";
 
 function Nav() {
+  const navRef = useRef<HTMLDivElement | null>(null);
   const [isMobileNavShow, setIsMobileNavShow] = useState<boolean>(false);
+  function closeMobileNav() {
+    setIsMobileNavShow(false);
+  }
+  useDetectOutsideClick(navRef, closeMobileNav);
   return (
     <div>
       {/* Mobile Design */}
@@ -19,7 +25,10 @@ function Nav() {
       {isMobileNavShow && (
         <div className="">
           <Overlay show={isMobileNavShow}>
-            <div className="  fixed top-0 right-0 bottom-0 w-[300px] bg-white z-50">
+            <div
+              ref={navRef}
+              className="  fixed top-0 right-0 bottom-0 w-[300px] bg-white z-50"
+            >
               <div className="flex flex-col gap-2 h-full w-full  space-y-4">
                 <h1 className="text-3xl text-primary-900 font-semibold border-b border-b-primary-900 pb-4 px-8 py-4">
                   اهورا
