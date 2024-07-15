@@ -15,7 +15,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" dir="rtl">
       <body className="bg-primary-900 text-white">
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
