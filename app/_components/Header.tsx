@@ -6,7 +6,7 @@ import Nav from "./Nav";
 function Header() {
   // Header Design
   return (
-    <header className=" container-fluid flex items-center justify-between h-[88px] ">
+    <header className=" container-fluid flex flex-wrap gap-y-2 items-center justify-between h-[88px] ">
       {/* rightSide Flow */}
       <div className="flex items-center ">
         <h1 className="text-xl font-semibold">نمونه کار من</h1>
