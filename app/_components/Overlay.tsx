@@ -8,7 +8,7 @@ function Overlay({ children, show }: OverlayProps) {
   return (
     <div
       className={`${
-        show ? "fixed top-0 left-0 right-0 bottom-0 bg-black/50" : ""
+        show ? "fixed top-0 left-0 right-0 bottom-0 bg-black/50 z-[9999]" : ""
       }`}
     >
       {children}
