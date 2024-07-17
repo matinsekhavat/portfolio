@@ -22,7 +22,8 @@ function page() {
                 برنامه نویس + <br />
                 <TypeWriter
                   textList={["طراح رابط کاربری", "تجربه کاربری", "ادیتور"]}
-                  speed={140}
+                  speed={160}
+                  timeLoops={2}
                 />
               </p>
               <p className="text-lg text-justify sm:text-center md:text-right md:text-xl my-8 md:my-16">
