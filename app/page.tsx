@@ -1,8 +1,9 @@
-import { BadgeCheck, Cat, Command } from "lucide-react";
+import { BadgeCheck, Cat, Command, Type } from "lucide-react";
 import ButtonBadge from "./_components/ButtonBadge";
 import HeroBadge from "./_components/Hero/HeroBadge";
 import Image from "next/image";
 import IncrementalInfo from "./_components/IncrementalInfo";
+import TypeWriter from "./_components/Hero/TypeWriter";
 
 function page() {
   return (
@@ -16,9 +17,13 @@ function page() {
               <h3 className="text-4xl font-semibold md:text-[35px] ">
                 من متین هستم
               </h3>
+
               <p className="text-3xl text-accent-200 font-semibold relative  my-6 md:text-4xl  ">
                 برنامه نویس + <br />
-                طراح رابط کاربری و تجربه کاربری
+                <TypeWriter
+                  textList={["طراح رابط کاربری", "تجربه کاربری", "ادیتور"]}
+                  speed={140}
+                />
               </p>
               <p className="text-lg text-justify sm:text-center md:text-right md:text-xl my-8 md:my-16">
                 فردی پرشور و مشتاق به تعامل با افراد مختلف هستم. بیش از ۸ سال
