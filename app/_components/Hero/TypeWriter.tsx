@@ -1,7 +1,10 @@
 "use client";
 import { useEffect, useState, useMemo, useCallback } from "react";
-
-export default function TypeWriter({ textList }: { textList: string[] }) {
+type TypeWriterProps = {
+  textList: string[];
+  speed: number;
+};
+export default function TypeWriter({ textList, speed = 120 }: TypeWriterProps) {
   const [index, setIndex] = useState(0);
   const [isDeleting, setIsDeleting] = useState(false);
   const [textIndex, setTextIndex] = useState(0);
@@ -35,14 +38,14 @@ export default function TypeWriter({ textList }: { textList: string[] }) {
   }, [textList, index, isDeleting, textIndex]);
 
   useEffect(() => {
-    const interval = setInterval(intervalCallback, 100);
+    const interval = setInterval(intervalCallback, speed);
 
     return () => clearInterval(interval);
   }, [intervalCallback]);
 
   return (
     <div>
-      سلام من {newText}
+      {newText}
       {/* Add a caret at the end of the newText to simulate a typing cursor */}
       <span>|</span>
     </div>
