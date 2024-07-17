@@ -64,17 +64,52 @@ function page() {
       </section>
       {/* Incremental data */}
       <section className="container-fluid">
-        <IncrementalInfo
-          incrementValue={1}
-          initialValue={0}
-          intervalDelay={80}
-          maxValue={12}
-          hasSignPlus={true}
-        >
-          سال
-          <br />
-          تجربه کاری
-        </IncrementalInfo>
+        <div className="flex items-center gap-8 flex-wrap justify-center md:justify-between text-center">
+          <IncrementalInfo
+            incrementValue={1}
+            initialValue={0}
+            intervalDelay={80}
+            maxValue={12}
+            hasSignPlus={false}
+          >
+            سال
+            <br />
+            تجربه کاری
+          </IncrementalInfo>
+          <IncrementalInfo
+            incrementValue={10}
+            initialValue={0}
+            intervalDelay={50}
+            maxValue={500}
+            hasSignPlus={true}
+          >
+            {"  "} پروژه <br />
+            زده شده
+          </IncrementalInfo>
+          <IncrementalInfo
+            incrementValue={0.1}
+            initialValue={0}
+            intervalDelay={100}
+            maxValue={1.5}
+            hasSignPlus={true}
+            hasThousandSign={true}
+          >
+            رضایت
+            <br />
+            مشتریان
+          </IncrementalInfo>{" "}
+          <IncrementalInfo
+            incrementValue={1}
+            initialValue={1}
+            intervalDelay={300}
+            maxValue={4}
+            hasSignPlus={true}
+            hasThousandSign={true}
+          >
+            مشاوره
+            <br />و منتورینگ
+          </IncrementalInfo>
+        </div>
       </section>
     </div>
   );
