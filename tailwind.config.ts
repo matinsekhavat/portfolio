@@ -18,6 +18,9 @@ const config: Config = {
           900: "#2D1F49",
         },
       },
+      fontFamily: {
+        dana: ["var(--font-dana)"],
+      },
     },
   },
   plugins: [],
