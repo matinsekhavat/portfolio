@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import localFont from "next/font/local";
 import "./globals.css";
+import { dana } from "@/public/fonts/font";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
 
@@ -16,7 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl">
-      <body className="bg-primary-900 text-white">
+      <body className={`bg-primary-900 text-white font-dana ${dana.variable}`}>
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
           <Header />
