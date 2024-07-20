@@ -1,3 +1,4 @@
+// for host npx next dev -H 192.168.1.2
 import type { Metadata } from "next";
 import "./globals.css";
 import { dana } from "@/public/fonts/font";
