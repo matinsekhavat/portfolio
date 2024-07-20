@@ -1,5 +1,3 @@
-import { AlignJustify } from "lucide-react";
-import { ReactNode } from "react";
 import ButtonBadge from "./ButtonBadge";
 import { FileDown } from "lucide-react";
 import Nav from "./Nav";
@@ -15,9 +13,15 @@ function Header() {
 
       {/* left side flow */}
       <ButtonBadge>
-        <span className="flex items-center gap-2">
+        <a
+          href="/resume/matin-sekhavat-cv.pdf"
+          className="flex items-center gap-2"
+          download="MatinSekhavat-CV"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           <FileDown size={20} /> دانلود رزومه
-        </span>
+        </a>
       </ButtonBadge>
     </header>
   );
