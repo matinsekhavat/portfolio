@@ -10,8 +10,8 @@ function WorkSamples() {
           description="پروژه هایی که تاکنون انجام داده ام..."
         />
       </div>
-      {/* Selection List */}
-      <div className="flex items-center justify-center gap-2">
+      {/* button List */}
+      <div className="flex items-center justify-center gap-2 flex-wrap">
         <WorkButtons paramsKey="cat" value="all">
           همه
         </WorkButtons>
@@ -25,6 +25,14 @@ function WorkSamples() {
         <WorkButtons paramsKey="cat" value="ui">
           ui/ux
         </WorkButtons>
+      </div>
+      {/* Work Samples */}
+      <div className="my-8">
+        <div className="h-44 p-4 border border-accent-800 rounded-3xl flex items-center justify-center max-w-screen-md mx-auto">
+          <p className="text-4xl font-bold text-center">
+            این قسمت در دست توسعه میباشد...👋🏻💖
+          </p>
+        </div>
       </div>
     </>
   );
