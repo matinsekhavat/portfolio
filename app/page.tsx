@@ -129,9 +129,9 @@ function page() {
           <Experiences />
         </section>
         {/* Certificate section */}
-        <section className="my-20">
-          <Certificate />
-        </section>
+      </section>
+      <section className="my-20 bg-primary-850">
+        <Certificate />
       </section>
     </div>
   );
