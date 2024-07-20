@@ -18,7 +18,7 @@ const FlexCard: React.FC<Props> = ({
   return (
     <div className="text-center">
       {/* Upper side */}
-      <div className="h-[213px] bg-primary-850 flex flex-col items-center justify-between text-center rounded-3xl py-5 px-4">
+      <div className="h-[213px] bg-primary-850 flex flex-col items-center justify-between text-center rounded-3xl py-5 px-4 border border-transparent hover:border-accent-800   transition-all cursor-pointer">
         <div className="relative size-28">
           <Image src={imageSrc} fill className="object-cover" alt={imageAlt} />
           {/* percentage */}
