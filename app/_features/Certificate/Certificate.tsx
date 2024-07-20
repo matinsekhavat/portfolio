@@ -7,8 +7,6 @@ function Certificate() {
     <div className="bg-primary-850 grid grid-cols-2  ">
       <CertificateItem
         logoSrc="/google-logo.webp"
-        logoWidth={70}
-        logoHeight={70}
         logoAlt="google logo"
         title="گواهینامه Google Digital Garage"
         description="اصول دیجیتال مارکتینگ (1390)"
