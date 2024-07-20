@@ -12,7 +12,6 @@ export default function useDetectOutsideClick(
     function handleClick(e: MouseEvent) {
       if (ref.current && !ref.current.contains(e.target as Node)) {
         handler();
-        console.log("clicked");
       }
     }
 
