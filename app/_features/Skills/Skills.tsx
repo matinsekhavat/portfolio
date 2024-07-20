@@ -15,7 +15,7 @@ function Skills() {
         </p>
       </div>
       {/* Skills List */}
-      <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-3 md:grid-cols-5">
+      <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         <SkillsItems
           imageSrc="/html-logo.png"
           imageAlt="HTML-logo"
