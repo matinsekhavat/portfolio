@@ -4,7 +4,7 @@ import SkillsItems from "./SkillsItems";
 
 function Skills() {
   return (
-    <div>
+    <div id="skills">
       <div className="text-center">
         <span className="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-200 to-accent-800 text-clip">
           مهارت های من
