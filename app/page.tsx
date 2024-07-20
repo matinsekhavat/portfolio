@@ -5,6 +5,7 @@ import Image from "next/image";
 import IncrementalInfo from "./_components/IncrementalInfo";
 import TypeWriter from "./_components/Hero/TypeWriter";
 import Skills from "./_features/Skills/Skills";
+import WorkSamples from "./_features/Work-Samples/WorkSamples";
 
 function page() {
   return (
@@ -114,6 +115,11 @@ function page() {
         {/* Skills Section */}
         <section className="my-20">
           <Skills />
+        </section>
+
+        {/* Work Samples Section */}
+        <section className="my-20">
+          <WorkSamples />
         </section>
       </section>
     </div>
