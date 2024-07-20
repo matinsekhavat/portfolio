@@ -6,6 +6,7 @@ import IncrementalInfo from "./_components/IncrementalInfo";
 import TypeWriter from "./_components/Hero/TypeWriter";
 import Skills from "./_features/Skills/Skills";
 import WorkSamples from "./_features/Work-Samples/WorkSamples";
+import Experiences from "./_features/Experiences/Experiences";
 
 function page() {
   return (
@@ -59,6 +60,7 @@ function page() {
               src="/hero-image.webp"
               fill
               alt="header-image"
+              loading="lazy"
               className=" sm:object-contain mx-auto "
             />
           </div>
@@ -120,6 +122,10 @@ function page() {
         {/* Work Samples Section */}
         <section className="my-20">
           <WorkSamples />
+        </section>
+        {/* Work Experiences */}
+        <section className="my-20">
+          <Experiences />
         </section>
       </section>
     </div>
