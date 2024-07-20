@@ -7,6 +7,7 @@ import TypeWriter from "./_components/Hero/TypeWriter";
 import Skills from "./_features/Skills/Skills";
 import WorkSamples from "./_features/Work-Samples/WorkSamples";
 import Experiences from "./_features/Experiences/Experiences";
+import Certificate from "./_features/Certificate/Certificate";
 
 function page() {
   return (
@@ -126,6 +127,10 @@ function page() {
         {/* Work Experiences */}
         <section className="my-20">
           <Experiences />
+        </section>
+        {/* Certificate section */}
+        <section className="my-20">
+          <Certificate />
         </section>
       </section>
     </div>
