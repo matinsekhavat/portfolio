@@ -1,6 +1,6 @@
 "use client";
 import { useSearchParams, usePathname, useRouter } from "next/navigation";
-import { ReactNode } from "react";
+import { ReactNode, memo, useCallback, useMemo } from "react";
 
 interface WorkButtonProps {
   value: string;
@@ -8,26 +8,24 @@ interface WorkButtonProps {
   children: ReactNode;
 }
 
-interface WorkButtonProps {
-  value: string;
-  paramsKey: string;
-  children: React.ReactNode;
-}
-
-const WorkButtons = ({ value, paramsKey, children }: WorkButtonProps) => {
+const WorkButtons = memo(({ value, paramsKey, children }: WorkButtonProps) => {
   const searchParams = useSearchParams();
   const pathname = usePathname();
   const router = useRouter();
-  const params = new URLSearchParams(searchParams);
+
+  const params = useMemo(
+    () => new URLSearchParams(searchParams),
+    [searchParams]
+  );
   const hasParams = params.get(paramsKey) || "all";
 
-  const handleClick = () => {
+  const handleClick = useCallback(() => {
     params.set(paramsKey, value);
     const newUrl = `${pathname}?${params.toString()}`;
     router.push(newUrl, {
       scroll: false,
     });
-  };
+  }, [params, pathname, router, paramsKey, value]);
 
   return (
     <button
@@ -39,6 +37,8 @@ const WorkButtons = ({ value, paramsKey, children }: WorkButtonProps) => {
       {children}
     </button>
   );
-};
+});
+
+WorkButtons.displayName = "WorkButtons";
 
 export default WorkButtons;
