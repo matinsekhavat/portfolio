@@ -1,19 +1,15 @@
 import { e2p } from "@/app/_utils/replaceNumber";
 import Image from "next/image";
 import SkillsItems from "./SkillsItems";
+import HeadTitle from "@/app/_components/HeadTitle";
 
 function Skills() {
   return (
     <div id="skills">
-      <div className="text-center">
-        <span className="inline-block text-5xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-accent-200 to-accent-800 text-clip">
-          مهارت های من
-        </span>
-        <br />
-        <p className=" my-6 text-lg">
-          و کماکان در جستجوی دانش های جدید، حتی اگر در ثریا باشد...
-        </p>
-      </div>
+      <HeadTitle
+        title="مهارت های من"
+        description="و کماکان در جستجوی دانش های جدید، حتی اگر در ثریا باشد..."
+      />
       {/* Skills List */}
       <div className="grid grid-cols-2 gap-x-6 gap-y-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6">
         <SkillsItems
