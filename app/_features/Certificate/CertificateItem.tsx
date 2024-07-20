@@ -16,7 +16,7 @@ function CertificateItem({
   description,
 }: CertificateItemProps) {
   return (
-    <div className="flex items-center gap-3 border border-stone-700 rounded-xl p-4 overflow-hidden">
+    <div className="flex items-center gap-3 border border-stone-700 rounded-xl  p-4 hover:border-accent-800 transition-all cursor-help ">
       <div>
         <Image src={logoSrc} width={50} height={50} alt={logoAlt} />
       </div>
