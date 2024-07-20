@@ -1,4 +1,4 @@
-import { BadgeCheck, Cat, Command, Type } from "lucide-react";
+import { BadgeCheck, Cat } from "lucide-react";
 import ButtonBadge from "./_components/ButtonBadge";
 import HeroBadge from "./_components/Hero/HeroBadge";
 import Image from "next/image";
