@@ -8,6 +8,7 @@ import Skills from "./_features/Skills/Skills";
 import WorkSamples from "./_features/Work-Samples/WorkSamples";
 import Experiences from "./_features/Experiences/Experiences";
 import Certificate from "./_features/Certificate/Certificate";
+import Articles from "./_features/Articles/Articles";
 
 function page() {
   return (
@@ -133,6 +134,10 @@ function page() {
       <section className="my-20 bg-primary-850">
         <Certificate />
       </section>
+      {/* Articles section */}
+      <article className="my-20">
+        <Articles />
+      </article>
     </div>
   );
 }
