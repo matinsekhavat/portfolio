@@ -135,7 +135,7 @@ function page() {
         <Certificate />
       </section>
       {/* Articles section */}
-      <article className="my-20">
+      <article className="my-20 container-fluid">
         <Articles />
       </article>
     </div>
