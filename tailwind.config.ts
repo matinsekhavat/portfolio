@@ -18,6 +18,9 @@ const config: Config = {
           800: "#8750F7",
           900: "#2D1F49",
         },
+        gray: {
+          50: "#FFFFFF80",
+        },
       },
       fontFamily: {
         dana: ["var(--font-dana)"],
