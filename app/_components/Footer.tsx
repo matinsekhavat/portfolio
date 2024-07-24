@@ -9,6 +9,7 @@ type ImageProps = {
   src: string;
   width: number;
   height: number;
+  href: string;
 };
 
 const socialMedias: ImageProps[] = [
@@ -17,24 +18,28 @@ const socialMedias: ImageProps[] = [
     height: 50,
     width: 50,
     src: "/social-medias/telegram-logo.png",
+    href: "t.me/matinsekhavat",
   },
   {
     alt: "instagaram Matin-Sekhavat",
     height: 50,
     width: 50,
     src: "/social-medias/instagram-logo-2.png",
+    href: "https://www.instagram.com/matinsekhavat?igsh=c3JuZnAzNnBnZWY0",
   },
   {
     alt: "Linkedin Matin-Sekhavat",
     height: 50,
     width: 50,
     src: "/social-medias/linkedin-logo.png",
+    href: "https://www.linkedin.com/in/matin-sekhavat-bb78a7301/",
   },
   {
     alt: "github Matin-Sekhavat",
     height: 70,
     width: 65,
     src: "/social-medias/github-logo-1.png",
+    href: "https://github.com/matinsekhavat",
   },
 ];
 function Footer() {
@@ -66,7 +71,12 @@ function Footer() {
             {/* Social Medias */}
             <div className="flex items-center my-2">
               {socialMedias.map((item) => (
-                <Link href="/" key={item.alt} className="inline-block p-2">
+                <Link
+                  href={item.href}
+                  key={item.alt}
+                  className="inline-block p-2"
+                  target="_blank"
+                >
                   <Image
                     alt={item.alt}
                     width={item.width}
