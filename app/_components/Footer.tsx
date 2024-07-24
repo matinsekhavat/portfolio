@@ -107,8 +107,20 @@ function Footer() {
               Icon={<MailCheck size={30} />}
             />
           </div>
-          <p className="mt-auto lg:mt-8 text-center">
+          <p className="mt-auto lg:mt-8 text-center pt-8">
             ساخته شده با 💖 توسط متین سخاوت
+          </p>
+          <p className=" mt-4">
+            تمامی محتویات Ui/Ux قالب متعلق به شرکت
+            <Link
+              target="_blank"
+              href="https://mihanwp.com/demo/ahura/"
+              className="text-amber-400 underline "
+            >
+              {" "}
+              اهورا وردپرس
+            </Link>{" "}
+            میباشد و این یک پروژه تمرینی میباشد.
           </p>
         </div>
       </div>
