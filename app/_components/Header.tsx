@@ -6,8 +6,8 @@ function Header() {
   return (
     <header className=" container-fluid flex flex-wrap gap-y-2 items-center justify-between h-[88px] ">
       {/* rightSide Flow */}
-      <div className="flex items-center ">
-        <h1 className="text-xl font-semibold">نمونه کار من</h1>
+      <div className="flex items-center justify-between w-full my-2 xs:justify-normal xs:w-auto xs:mt-0 ">
+        <h1 className="text-xl font-semibold ">نمونه کار من</h1>
         <Nav />
       </div>
 
