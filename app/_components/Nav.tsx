@@ -17,7 +17,7 @@ function Nav() {
     <div>
       {/* Mobile Design */}
       <button
-        className="p-2 bg-purple-600 rounded-xl mr-20 inline-block lg:hidden"
+        className=" p-2 bg-purple-600 rounded-xl mr-20 inline-block lg:hidden"
         onClick={() => setIsMobileNavShow(true)}
       >
         <AlignJustify size={30} cursor="pointer" />
