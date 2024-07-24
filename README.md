@@ -1,7 +1,7 @@
 # Pesronal porfolio design
 
-This is a personal porfolio design for my personal use. It is a simple design with a few Info from who i am.
-
+- This is a personal porfolio design for my personal use. It is a simple design with a few Info from who i am.
+See Demo Of Project <a href="" target="_blank">Here</a>
 ---
 
 ### COPYRIGHT
@@ -18,3 +18,4 @@ This is a personal porfolio design for my personal use. It is a simple design wi
     <li>TypeScript</li>
     <li>TailwindCSS</li>
 </ol>
+---
