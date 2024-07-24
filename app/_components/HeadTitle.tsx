@@ -6,8 +6,8 @@ type HeadTitlleProps = {
 };
 
 const HeadTitleStyle: HeadTitleStyleProps = {
-  sm: "text-2xl text-center",
-  base: "text-5xl ",
+  sm: "text-2xl text-right",
+  base: "text-5xl text-center ",
 };
 type HeadTitleStyleProps = {
   sm: string;
