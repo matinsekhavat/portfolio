@@ -66,7 +66,7 @@ function Footer() {
             {/* Social Medias */}
             <div className="flex items-center my-2">
               {socialMedias.map((item) => (
-                <Link href="/" key={item.alt}>
+                <Link href="/" key={item.alt} className="inline-block p-2">
                   <Image
                     alt={item.alt}
                     width={item.width}
