@@ -11,9 +11,9 @@ function Articles() {
         description="تلاش برای داشتن اطلاعات کاربردی، به روز و جامع"
       />
       {/* Articles List Wrapper */}
-      <div className="grid grid-cols-1 sm:grid-cols-2">
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {/* item */}
-        <div className="p-2 rounded-xl bg-primary-850 ">
+        <div className="p-3 rounded-xl bg-primary-850 ">
           {/* Upperside */}
           <div className="relative w-full h-72">
             <Image
@@ -29,22 +29,22 @@ function Articles() {
           </div>
           {/* downer side */}
           <div className="flex flex-col gap-4  mt-4">
-            <h3 className="text-2xl">
+            <h3 className="text-base sm:text-xl font-bold">
               زمان نوشتن رزومه چه قوانینی را رعایت کنیم؟
             </h3>
-            <p className="line-clamp-2 sm:line-clamp-3">
+            <p className="line-clamp-2 text-sm sm:text-base sm:line-clamp-3 font-light text-accent-200 my-2 ">
               لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با
               استفاده از طراحان گرافیک است، چاپگرها و...
             </p>
             <div className="flex items-center justify-between">
-              <div className="flex items-center gap-1">
+              <div className="flex items-center gap-1 text-sm sm:text-base">
                 <Calendar />
                 <p>
                   فروردین {e2p(14)}, {e2p(1403)}{" "}
                 </p>
               </div>
               <span>
-                <ArrowLeft size={30} />
+                <ArrowLeft size={25} />
               </span>
             </div>
           </div>
