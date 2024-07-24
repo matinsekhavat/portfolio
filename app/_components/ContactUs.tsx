@@ -9,13 +9,13 @@ interface ContactUsProps {
 
 const ContactUs: React.FC<ContactUsProps> = ({ Icon, description, title }) => {
   return (
-    <div className="flex items-center gap-4 ">
+    <div className="flex items-center gap-4 flex-col sm:flex-row ">
       <span className="size-14 p-2 bg-accent-800 rounded-full flex items-center justify-center">
         {Icon}
       </span>
       <div className="space-y-4">
         <p className="text-gray-50 font-bold text-lg">{title}</p>
-        <p>{e2p(description)}</p>
+        <p className="">{e2p(description)}</p>
       </div>
     </div>
   );
