@@ -1,12 +1,10 @@
-// components/ArticleCard.tsx
-
 import React from "react";
 import Image from "next/image";
 import { ArrowLeft, Calendar } from "lucide-react";
 import { e2p } from "@/app/_utils/replaceNumber";
 import Link from "next/link";
 
-interface ArticleCardProps {
+interface ArticleItemProps {
   imageSrc: string;
   imageAlt: string;
   category: string;
@@ -18,7 +16,7 @@ interface ArticleCardProps {
   href: string;
 }
 
-const ArticleCard: React.FC<ArticleCardProps> = ({
+const ArticleItem: React.FC<ArticleItemProps> = ({
   imageSrc,
   imageAlt,
   category,
@@ -32,7 +30,7 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   return (
     <div className="p-3 rounded-xl bg-primary-850">
       {/* Upperside */}
-      <div className="relative w-full h-72">
+      <div className="relative w-full h-64">
         <Image
           alt={imageAlt}
           fill
@@ -66,4 +64,4 @@ const ArticleCard: React.FC<ArticleCardProps> = ({
   );
 };
 
-export default ArticleCard;
+export default ArticleItem;
