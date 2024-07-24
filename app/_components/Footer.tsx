@@ -41,10 +41,10 @@ function Footer() {
   return (
     <div className="mt-2">
       {/* Wrapper  */}
-      <div className=" grid sm:grid-cols-2 h-[268px]">
+      <div className=" grid md:grid-cols-2 h-[268px]">
         <div
           id="col-1 "
-          className="p-8 bg-primary-850 py-4 grid sm:grid-cols-[200px_1.5fr] gap-4"
+          className="p-8 bg-primary-850 py-4 grid grid-cols-1 lg:grid-cols-[200px_1.5fr] gap-4"
         >
           <div className="" id="accessLink">
             <p className=" mb-4 text-lg ">صفحات کاربردی</p>
@@ -79,7 +79,7 @@ function Footer() {
           </div>
         </div>
         {/* cols-2 */}
-        <div id="col-2" className="bg-accent-900 p-4">
+        <div id="col-2" className="bg-accent-900 p-4 flex flex-col">
           <HeadTitle
             title="ارتباط با من"
             description="از طریق این راه ها میتونید با من در ارتباط باشید."
@@ -97,6 +97,9 @@ function Footer() {
               Icon={<MailCheck size={30} />}
             />
           </div>
+          <p className="mt-auto lg:mt-8 text-center">
+            ساخته شده با 💖 توسط متین سخاوت
+          </p>
         </div>
       </div>
     </div>
