@@ -1,27 +1,44 @@
 import HeadTitle from "@/app/_components/HeadTitle";
-import ArticleCard from "./ArticleItem";
+import ArticleItem from "./ArticleItem";
+import { articlesData } from "@/app/_lib/data";
+
+interface Article {
+  imageSrc: string;
+  imageAlt: string;
+  category: string;
+  title: string;
+  description: string;
+  date: string;
+  href: string;
+}
 
 function Articles() {
   return (
-    <div id="#articles">
+    <div id="articles">
       <HeadTitle
         title="مقالات"
         description="تلاش برای داشتن اطلاعات کاربردی، به روز و جامع"
       />
       {/* Articles List Wrapper */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
+      <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {/* item */}
-        <ArticleCard
-          imageSrc="/article-1.jpeg"
-          imageAlt="Article Image"
-          category="رزومه نویسی"
-          title="زمان نوشتن رزومه چه قوانینی را رعایت کنیم؟"
-          description="لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و..."
-          year="1403"
-          month="فروردین"
-          day={14}
-          href="/article"
-        />
+        {articlesData.map((article: Article) => {
+          const [year, month, day] = article.date.split("/");
+          return (
+            <ArticleItem
+              key={article.href}
+              imageSrc={article.imageSrc}
+              imageAlt={article.imageAlt}
+              category={article.category}
+              title={article.title}
+              description={article.description}
+              year={year}
+              month={month}
+              day={parseInt(day)}
+              href={article.href}
+            />
+          );
+        })}
       </div>
     </div>
   );
