@@ -26,7 +26,7 @@ const config: Config = {
         dana: ["var(--font-dana)"],
       },
       screens: {
-        xs: "400px",
+        xs: "421px",
       },
     },
   },
