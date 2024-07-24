@@ -1,5 +1,4 @@
 import React from "react";
-import { Phone } from "lucide-react";
 import { e2p } from "../_utils/replaceNumber";
 
 interface ContactUsProps {
