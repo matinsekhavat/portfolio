@@ -25,6 +25,9 @@ const config: Config = {
       fontFamily: {
         dana: ["var(--font-dana)"],
       },
+      screens: {
+        xs: "400px",
+      },
     },
   },
   plugins: [],
