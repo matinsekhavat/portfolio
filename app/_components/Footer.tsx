@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+import HeadTitle from "./HeadTitle";
 type ImageProps = {
   alt: string;
   src: string;
@@ -74,7 +75,14 @@ function Footer() {
             </div>
           </div>
         </div>
-        <div id="col-2" className="bg-accent-900"></div>
+        {/* cols-2 */}
+        <div id="col-2" className="bg-accent-900 p-4">
+          <HeadTitle
+            title="ارتباط با من"
+            description="از طریق این راه ها میتونید با من در ارتباط باشید."
+            size="sm"
+          />
+        </div>
       </div>
     </div>
   );
