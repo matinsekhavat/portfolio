@@ -44,7 +44,7 @@ const socialMedias: ImageProps[] = [
 ];
 function Footer() {
   return (
-    <div className="mt-2">
+    <div className="mt-2" id="#contact-us">
       {/* Wrapper  */}
       <div className=" grid md:grid-cols-2 h-[268px]">
         <div
