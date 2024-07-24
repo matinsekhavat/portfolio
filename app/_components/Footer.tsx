@@ -1,6 +1,9 @@
 import Image from "next/image";
 import Link from "next/link";
 import HeadTitle from "./HeadTitle";
+import ContactUs from "./ContactUs";
+import { MailCheck, Phone } from "lucide-react";
+
 type ImageProps = {
   alt: string;
   src: string;
@@ -82,6 +85,18 @@ function Footer() {
             description="از طریق این راه ها میتونید با من در ارتباط باشید."
             size="sm"
           />
+          <div className="space-y-4">
+            <ContactUs
+              title="شماره تلفن من"
+              description="09368395124"
+              Icon={<Phone size={30} />}
+            />
+            <ContactUs
+              title="ایمیل من"
+              description="matinsekhavat20@gmail.com"
+              Icon={<MailCheck size={30} />}
+            />
+          </div>
         </div>
       </div>
     </div>
