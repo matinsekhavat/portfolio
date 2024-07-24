@@ -44,7 +44,7 @@ function Footer() {
         >
           <div className="" id="accessLink">
             <p className=" mb-4 text-lg ">صفحات کاربردی</p>
-            <ul>
+            <ul className="space-y-2 text-accent-800">
               <li>صفحه اصلی</li>
               <li>نمونه کار ها</li>
               <li>رزومه من</li>
