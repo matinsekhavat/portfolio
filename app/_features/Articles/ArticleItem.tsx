@@ -28,7 +28,7 @@ const ArticleItem: React.FC<ArticleItemProps> = ({
   href,
 }) => {
   return (
-    <div className="p-3 rounded-xl bg-primary-850">
+    <div className="p-3 rounded-xl bg-primary-850 flex flex-col justify-between">
       {/* Upperside */}
       <div className="relative w-full h-64">
         <Image
@@ -52,7 +52,7 @@ const ArticleItem: React.FC<ArticleItemProps> = ({
           <div className="flex items-center gap-1 text-sm sm:text-base">
             <Calendar />
             <p>
-              {month} {e2p(day)}, {e2p(year)}
+              {e2p(month)} ,{e2p(day)}, {e2p(year)}
             </p>
           </div>
           <Link href={href}>
