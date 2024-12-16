@@ -4,6 +4,7 @@ import "./globals.css";
 import { dana } from "@/public/fonts/font";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
+import Script from "next/script";
 
 export const metadata: Metadata = {
   title: "پورتفولیو متین سخاوت",
@@ -20,6 +21,19 @@ export default function RootLayout({
       <body
         className={`  bg-primary-900 text-white font-dana ${dana.variable}`}
       >
+       <Script
+          id="mu-chat"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: `
+              import Chatbox from 'https://muchat-develop-widget.liara.run/dist/chatbox/index.js';
+              const widget = await Chatbox.initBubble({
+                agentId: 'cm1lstpon0002sk19xpn8u8cy',
+              });
+            `,
+          }}
+          type="module"
+        />
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
           <Header />
