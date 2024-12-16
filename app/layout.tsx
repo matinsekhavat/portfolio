@@ -26,7 +26,7 @@ export default function RootLayout({
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
-              import Chatbox from 'https://muchat-develop-widget.liara.run/dist/chatbox/index.js';
+              import Chatbox from 'https://muchat-develop-widget.liara.run/embeds/dist/chatbox/index.js';
               const widget = await Chatbox.initBubble({
                 agentId: 'cm1lstpon0002sk19xpn8u8cy',
               });
