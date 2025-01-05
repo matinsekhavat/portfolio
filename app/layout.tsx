@@ -39,23 +39,7 @@ export default function RootLayout({
         className={`  bg-primary-900 text-white font-dana ${dana.variable}`}
       >
       
-         <Script
-         id="mu-chat"
     
-        type="module"
-        dangerouslySetInnerHTML={{
-          __html: `
-            import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
-            Chatbox.initBubble({
-              agentId: 'cm0ozf3q802e69fcak851bjsw',
-              interface: {
-               position: 'right',
-              },
-            loadingStrategy: 'SEO_FRIENDLY',
-            });
-          `
-        }}
-      />
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
         <noscript>
