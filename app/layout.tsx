@@ -50,6 +50,23 @@ export default function RootLayout({
             style={{ display: 'none', visibility: 'hidden' }}
           />
         </noscript>
+        {/* <Script
+          id="mu-chat"
+          strategy="afterInteractive"
+          type="module"
+          dangerouslySetInnerHTML={{
+            __html: `
+              import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
+              Chatbox.initBubble({
+                agentId: 'cm0ozf3q802e69fcak851bjsw',
+                interface: {
+                 position: 'right',
+                },
+              loadingStrategy: 'SEO_FRIENDLY',
+              });
+            `
+          }}
+        /> */}
           <Header />
           <main>
             <div>{children}</div>
