@@ -71,10 +71,10 @@ export default function RootLayout({
             type="module"
             dangerouslySetInnerHTML={{
               __html: `import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
-            
-  Chatbox.initBubble({
-  agentId: 'cm1lstpon0002sk19xpn8u8cy',
-     });`,
+             
+   Chatbox.initBubble({
+   agentId: 'cm0ozf3q802e69fcak851bjsw',
+      });`,
             }}
           />
           <Header />
