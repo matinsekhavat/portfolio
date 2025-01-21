@@ -19,7 +19,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" dir="rtl" className="scroll-smooth scroll-p-8">
-   <head>
+      <head>
         {/* Google Tag Manager Script */}
         <Script
           id="gtm-script"
@@ -38,19 +38,17 @@ export default function RootLayout({
       <body
         className={`  bg-primary-900 text-white font-dana ${dana.variable}`}
       >
-      
-    
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
-        <noscript>
-          <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-PKDDKZLJ"
-            height="0"
-            width="0"
-            style={{ display: 'none', visibility: 'hidden' }}
-          />
-        </noscript>
-        {/* <Script
+          <noscript>
+            <iframe
+              src="https://www.googletagmanager.com/ns.html?id=GTM-PKDDKZLJ"
+              height="0"
+              width="0"
+              style={{ display: "none", visibility: "hidden" }}
+            />
+          </noscript>
+          {/* <Script
           id="mu-chat"
           strategy="afterInteractive"
           type="module"
@@ -67,11 +65,22 @@ export default function RootLayout({
             `
           }}
         /> */}
+
+          <Script
+            id="muchat-agent"
+            type="module"
+            dangerouslySetInnerHTML={{
+              __html: `import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
+            
+  Chatbox.initBubble({
+  agentId: 'cm1lstpon0002sk19xpn8u8cy',
+     });`,
+            }}
+          />
           <Header />
           <main>
             <div>{children}</div>
           </main>
-
           <Footer />
         </div>
       </body>
