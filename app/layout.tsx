@@ -21,19 +21,19 @@ export default function RootLayout({
     <html lang="en" dir="rtl" className="scroll-smooth scroll-p-8">
       <head>
         {/* Google Tag Manager Script */}
-        <Script
-          id="gtm-script"
-          strategy="beforeInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-              new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-              j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-              'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-PKDDKZLJ');
-            `,
-          }}
-        />
+         
+   <Script
+   id="muchat-agent"
+   type="module"
+   dangerouslySetInnerHTML={{
+   __html: `import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
+             
+   Chatbox.initBubble({
+   agentId: 'cm7348nqd00vc1vl1qkowznvn',
+      });`
+     }}
+   />
+   
       </head>
       <body
         className={`  bg-primary-900 text-white font-dana ${dana.variable}`}
