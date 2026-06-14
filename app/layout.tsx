@@ -22,17 +22,9 @@ export default function RootLayout({
       <head>
         {/* Google Tag Manager Script */}
          
-   <Script
-   id="muchat-agent"
-   type="module"
-   dangerouslySetInnerHTML={{
-   __html: `import Chatbox from 'https://cdn.mu.chat/embeds/dist/chatbox/index.js?v=2';
-             
-   Chatbox.initBubble({
-   agentId: 'cm7348nqd00vc1vl1qkowznvn',
-      });`
-     }}
-   />
+
+
+
    
       </head>
       <body
@@ -66,7 +58,7 @@ export default function RootLayout({
           }}
         /> */}
 
-          <Script
+          {/* <Script
             id="muchat-agent"
             type="module"
             dangerouslySetInnerHTML={{
@@ -76,7 +68,53 @@ export default function RootLayout({
    agentId: 'cm0ozf3q802e69fcak851bjsw',
       });`,
             }}
-          />
+          /> */}
+
+<Script id="muchat-sdk" strategy="lazyOnload">
+          {`
+            (function (d, t) {
+              var BASE_URL = "https://widget.mu.chat";
+              var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+
+              g.src = BASE_URL + "/sdk.js";
+              g.async = true;
+              s.parentNode.insertBefore(g, s);
+
+              g.onload = function () {
+                window.muchatSDK.run({
+                  websiteToken: "cm7348nqd00vc1vl1qkowznvn",
+                  baseUrl: BASE_URL,
+                });
+              };
+            })(document, "script");
+          `}
+        </Script>
+
+
+
+
+        {/* <Script id="test" strategy="afterInteractive">
+{
+  `
+  
+    window.chatwootSettings = {"position":"right","type":"standard","launcherTitle":""};
+  (function(d,t) {
+    var BASE_URL="https://app.chatwoot.com";
+    var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
+    g.src=BASE_URL+"/packs/js/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g,s);
+    g.onload=function(){
+      window.chatwootSDK.run({
+        websiteToken: 'xH7BnY5EgYFMVCQdxMgS63Yk',
+        baseUrl: BASE_URL
+      })
+    }
+  })(document,"script");
+  `
+}
+
+          </Script> */}
           <Header />
           <main>
             <div>{children}</div>
