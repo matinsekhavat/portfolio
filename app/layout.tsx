@@ -72,22 +72,25 @@ export default function RootLayout({
 
 <Script id="muchat-sdk" strategy="lazyOnload">
           {`
-            (function (d, t) {
-              var BASE_URL = "https://widget.mu.chat";
-              var g = d.createElement(t), s = d.getElementsByTagName(t)[0];
+           (function (d, t) {
+    var BASE_URL = "https://widget.mu.chat";
+    var g = d.createElement(t);
+    var s = d.getElementsByTagName(t)[0];
 
-              g.src = BASE_URL + "/sdk.js";
-              g.async = true;
-              s.parentNode.insertBefore(g, s);
+    g.src = BASE_URL + "/sdk.js";
+    g.async = true;
+    s.parentNode.insertBefore(g, s);
 
-              g.onload = function () {
-                window.muchatSDK.run({
-                  websiteToken: "cm7348nqd00vc1vl1qkowznvn",
-                  baseUrl: BASE_URL,
-                });
-              };
-            })(document, "script");
+    g.onload = function () {
+      window.muchatSDK.run({
+        websiteToken: "SJIEF0wuHnoD",
+        baseUrl: BASE_URL
+      });
+    };
+  })(document, "script");
           `}
+
+
         </Script>
 
 
@@ -115,6 +118,8 @@ export default function RootLayout({
 }
 
           </Script> */}
+
+
           <Header />
           <main>
             <div>{children}</div>
