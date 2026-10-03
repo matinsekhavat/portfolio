@@ -69,7 +69,7 @@ export default function RootLayout({
       });`,
             }}
           /> */}
-
+{/* 
 <Script id="muchat-sdk" strategy="lazyOnload">
           {`
            (function (d, t) {
@@ -91,7 +91,7 @@ export default function RootLayout({
           `}
 
 
-        </Script>
+        </Script> */}
 
 
 
