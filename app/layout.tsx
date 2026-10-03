@@ -4,7 +4,6 @@ import "./globals.css";
 import { dana } from "@/public/fonts/font";
 import Header from "./_components/Header";
 import Footer from "./_components/Footer";
-import Script from "next/script";
 import GoogleTagManager from "./_lib/GoogleTagManager";
 
 export const metadata: Metadata = {
@@ -20,26 +19,22 @@ export default function RootLayout({
   return (
     <html lang="en" dir="rtl" className="scroll-smooth scroll-p-8">
       <head>
-        {/* Google Tag Manager Script */}
-         
-
-
-
-   
+        <GoogleTagManager />
       </head>
       <body
         className={`  bg-primary-900 text-white font-dana ${dana.variable}`}
       >
+        {/* Google Tag Manager (noscript) */}
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-5FDZKH6H"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
         {/* App Layout */}
         <div className="min-h-dvh grid grid-rows-[auto_1fr_auto]">
-          <noscript>
-            <iframe
-              src="https://www.googletagmanager.com/ns.html?id=GTM-PKDDKZLJ"
-              height="0"
-              width="0"
-              style={{ display: "none", visibility: "hidden" }}
-            />
-          </noscript>
           {/* <Script
           id="mu-chat"
           strategy="afterInteractive"
